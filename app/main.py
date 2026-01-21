@@ -12,7 +12,7 @@ def get_weather() -> tuple[float, str]:
 
     params = {
         "key": api_key,
-        CITY: CITY,
+        "q": CITY,
     }
     response = requests.get(WEATHER_API_URL, params=params)
     if response.status_code != 200:
